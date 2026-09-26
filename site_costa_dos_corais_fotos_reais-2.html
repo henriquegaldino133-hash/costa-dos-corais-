@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guia educativo sobre consumo consciente e conservação da Costa dos Corais, em Alagoas.">
+<title>Consumo Consciente na Costa dos Corais</title>
+<style>
+:root{
+  --blue:#006d8f; --deep:#063b4c; --aqua:#0fb7b1; --sand:#fff7e8;
+  --green:#2e8b57; --coral:#ef765f; --ink:#17323b; --white:#fff;
+  --shadow:0 12px 35px rgba(6,59,76,.12); --radius:22px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f5fbfc;line-height:1.65}
+a{color:inherit}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #dceff2}
+.nav-inner{max-width:1180px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;color:var(--deep);text-decoration:none;display:flex;gap:10px;align-items:center}
+.brand-mark{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,var(--aqua),var(--blue));color:white}
+.menu{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem}
+.menu a{text-decoration:none;font-weight:700;color:#34535d}
+.menu a:hover{color:var(--blue)}
+.hero{min-height:690px;display:grid;place-items:center;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 75% 20%,rgba(255,255,255,.45) 0 5%,transparent 6%),
+ linear-gradient(160deg,#004e6b 0%,#008e9c 48%,#73d6c8 100%);color:#fff}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(1px);opacity:.28}
+.hero:before{width:600px;height:600px;border:70px solid #fff;right:-180px;bottom:-280px}
+.hero:after{width:420px;height:420px;border:45px solid #fff;left:-180px;top:-230px}
+.hero-content{max-width:1180px;width:100%;padding:85px 20px;position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.kicker{display:inline-flex;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);font-weight:800;font-size:.85rem}
+h1{font-size:clamp(2.6rem,6vw,5.3rem);line-height:.98;margin:18px 0 22px;letter-spacing:-.05em}
+.hero p{font-size:1.18rem;max-width:680px;color:#e9ffff}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 18px;border-radius:13px;text-decoration:none;font-weight:900}
+.btn-primary{background:#fff;color:var(--deep)}
+.btn-ghost{border:1px solid rgba(255,255,255,.5);color:#fff}
+.ocean-art{min-height:380px;border-radius:34px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);display:grid;place-items:center;box-shadow:0 30px 80px rgba(0,0,0,.15)}
+.ocean-art svg{width:88%;max-width:420px}
+main{max-width:1180px;margin:auto;padding:75px 20px}
+.section{margin-bottom:85px;scroll-margin-top:90px}
+.section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:28px}
+.eyebrow{color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:8px 0}
+.lead{max-width:780px;color:#4d6972;font-size:1.06rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid #e0eff2;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.card h3{margin:8px 0 8px;font-size:1.2rem}
+.icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#e7f8f7;font-size:1.5rem}
+.photo{height:230px;border-radius:18px;margin:-8px -8px 20px;overflow:hidden;background:#ccefee}
+.photo svg{width:100%;height:100%;display:block}.real-photo{width:100%;height:100%;object-fit:cover;display:block}
+.callout{padding:24px;border-radius:20px;background:linear-gradient(135deg,#e9fbf7,#eaf7ff);border-left:5px solid var(--aqua);margin-top:24px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.checklist{display:grid;gap:11px;margin:0;padding:0;list-style:none}
+.checklist li{padding:14px 16px;background:#fff;border:1px solid #e1eff1;border-radius:14px;display:flex;gap:12px}
+.checklist li:before{content:"✓";font-weight:900;color:var(--green)}
+.alert{background:#fff6df;border:1px solid #f2d48c;padding:22px;border-radius:18px}
+.alert strong{color:#8b5d00}
+.defeso{background:var(--deep);color:#fff;border-radius:28px;padding:32px;box-shadow:var(--shadow)}
+.defeso p{color:#d9f3f5}
+.defeso a{color:#fff;text-decoration:underline}
+.timeline{display:grid;gap:14px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.num{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--aqua);color:#fff;font-weight:900}
+.mapbox{border-radius:28px;overflow:hidden;background:#dff6f2;min-height:380px;display:grid;place-items:center;border:1px solid #c6e9e6}
+.sources{display:grid;gap:12px}
+.source{padding:17px 18px;background:#fff;border:1px solid #dfedef;border-radius:15px}
+.source a{font-weight:800;color:var(--blue)}
+footer{background:#063b4c;color:#d9f3f5;padding:45px 20px}
+.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+footer a{color:#fff}
+.small{font-size:.9rem;color:#6a838a}
+.quiz{background:#fff;border-radius:28px;padding:30px;box-shadow:var(--shadow);border:1px solid #e0eff2}
+.quiz button{border:0;padding:11px 15px;border-radius:10px;background:#e8f7f7;font-weight:800;cursor:pointer;margin:5px}
+#resultado{font-weight:900;margin-top:15px}
+@media(max-width:850px){
+ .hero-content{grid-template-columns:1fr}.ocean-art{min-height:280px}
+ .grid,.two{grid-template-columns:1fr}
+ .menu{display:none}.hero{min-height:620px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+ <div class="nav-inner">
+  <a class="brand" href="#inicio"><span class="brand-mark">🌊</span> Costa dos Corais</a>
+  <div class="menu">
+   <a href="#conheca">Conheça</a><a href="#pesca">Pesca</a><a href="#defeso">Defeso</a><a href="#recifes">Recifes</a>
+   <a href="#consumidor">Consumidor</a><a href="#turismo">Turismo</a><a href="#fontes">Fontes</a>
+  </div>
+ </div>
+</nav>
+
+<header class="hero" id="inicio">
+ <div class="hero-content">
+  <div>
+   <span class="kicker">GUIA EDUCATIVO • ALAGOAS</span>
+   <h1>Consumo consciente na Costa dos Corais</h1>
+   <p>Conheça, preserve e faça escolhas responsáveis para ajudar a proteger recifes, manguezais, praias, animais marinhos e as comunidades que vivem da região.</p>
+   <div class="cta">
+    <a class="btn btn-primary" href="#consumidor">Ver guia do consumidor</a>
+    <a class="btn btn-ghost" href="#fontes">Consultar fontes oficiais</a>
+   </div>
+  </div>
+  <div class="ocean-art" aria-label="Foto real da Costa dos Corais">
+   <img class="real-photo" src="https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais/O%20que%20Fazemos/pesquisaemonitoramento/imagens-da-home/jangada_em_maragogi.jpg/@@images/image" alt="Jangada em Maragogi, na Costa dos Corais" loading="eager">
+  </div>>
+ </div>
+</header>
+
+<main>
+<section class="section" id="conheca">
+ <div class="section-head"><div><div class="eyebrow">01 • território</div><h2>Conheça a Costa dos Corais</h2></div></div>
+ <p class="lead">A Área de Proteção Ambiental Costa dos Corais (APACC) é uma unidade de conservação federal de uso sustentável que envolve áreas costeiras e marinhas de Alagoas e Pernambuco. Sua gestão busca conciliar atividades humanas, como pesca e turismo, com a conservação.</p>
+ <div class="grid">
+  <article class="card"><div class="icon">🪸</div><h3>Recifes</h3><p>Os ambientes recifais oferecem abrigo e alimento para diversas formas de vida e fazem parte da paisagem que sustenta atividades de visitação.</p></article>
+  <article class="card"><div class="icon">🌱</div><h3>Manguezais</h3><p>Os manguezais integram o mosaico de ecossistemas costeiros da região e estão entre os ambientes que a APA busca proteger.</p></article>
+  <article class="card"><div class="icon">🐋</div><h3>Fauna marinha</h3><p>A região é importante para espécies marinhas, incluindo o peixe-boi-marinho, cuja conservação é uma das prioridades associadas à área.</p></article>
+ </div>
+ <div class="callout"><strong>Dados da unidade:</strong> a APACC foi criada em 1997 e possui cerca de 405,8 mil hectares. Consulte o ICMBio para limites, plano de manejo e regras atualizadas.</div>
+</section>
+
+<section class="section" id="pesca">
+ <div class="section-head"><div><div class="eyebrow">02 • comunidades</div><h2>Pesca artesanal</h2></div></div>
+ <div class="two">
+  <div class="card">
+   <h3>Por que ela importa?</h3>
+   <p>A pesca tem importância alimentar, econômica, social e cultural. Na Costa dos Corais, o ICMBio mantém ações específicas relacionadas à pesca artesanal e à gestão socioambiental.</p>
+   <p><strong>Consumo responsável:</strong> procure saber a origem do pescado e dê preferência a produtos comercializados de forma regular.</p>
+  </div>
+  <div class="card">
+   <h3>Antes de comprar pescado</h3>
+   <ul class="checklist">
+    <li>Pergunte a origem do produto.</li><li>Confira se a espécie está sujeita a alguma regra de pesca.</li>
+    <li>Respeite períodos de defeso.</li><li>Evite produtos cuja origem seja desconhecida.</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="defeso">
+ <div class="defeso">
+  <div class="eyebrow" style="color:#8de8e0">03 • proteção da reprodução</div>
+  <h2>O que é o defeso?</h2>
+  <p>É o período em que a pesca de determinada espécie é proibida ou regulada para proteger sua reprodução ou recrutamento e contribuir para manter os estoques em níveis sustentáveis.</p>
+  <div class="alert"><strong>Atenção:</strong> não existe uma única data de defeso para todo pescado. As regras dependem da espécie, da área e da norma vigente. Antes de comprar, consulte as regras oficiais do Ibama e do Ministério da Pesca e Aquicultura.</div>
+  <p style="margin-top:20px"><a href="https://www.gov.br/ibama/pt-br/assuntos/biodiversidade/biodiversidade-aquatica/periodos-de-defeso" target="_blank" rel="noopener">Consultar períodos de defeso no Ibama →</a></p>
+ </div>
+</section>
+
+<section class="section" id="recifes">
+ <div class="section-head"><div><div class="eyebrow">04 • ambiente</div><h2>Por que proteger os recifes?</h2></div></div>
+ <div class="grid">
+  <article class="card">
+   <div class="photo"><img class="real-photo" src="https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais/guia-do-visitante/19.jpg/@@images/image" alt="Ambiente costeiro da APA Costa dos Corais" loading="lazy"></div>
+   <h3>Vida marinha</h3><p>Recifes funcionam como habitat para muitos organismos e ajudam a sustentar a biodiversidade costeira.</p>
+  </article>
+  <article class="card">
+   <div class="photo"><img class="real-photo" src="https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais/O%20que%20Fazemos/pesquisaemonitoramento/imagens-da-home/jangada_em_maragogi.jpg/@@images/image" alt="Jangada em Maragogi, na Costa dos Corais" loading="lazy"></div>
+   <h3>Paisagem e visitação</h3><p>A região reúne praias, piscinas naturais, recifes e outras experiências de visitação que precisam ser ordenadas para reduzir impactos.</p>
+  </article>
+  <article class="card">
+   <div class="photo"><img class="real-photo" src="https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais/O%20que%20Fazemos/pesca/img_8808.jpg/@@images/image" alt="Registro fotográfico de atividade de pesca na APA Costa dos Corais" loading="lazy"></div>
+   <h3>Pesca artesanal</h3><p>A pesca artesanal faz parte das atividades e comunidades presentes na APA e é acompanhada pelo ICMBio.</p>
+  </article>
+ </div>
+</section>
+
+<section class="section" id="consumidor">
+ <div class="section-head"><div><div class="eyebrow">05 • escolhas</div><h2>Guia do consumidor consciente</h2></div></div>
+ <div class="two">
+  <div>
+   <ul class="checklist">
+    <li>Prefira produtos de origem conhecida.</li>
+    <li>Evite comprar animais retirados ilegalmente da natureza.</li>
+    <li>Respeite os períodos de defeso e demais regras de pesca.</li>
+    <li>Reduza o uso de plástico descartável.</li>
+    <li>Não jogue lixo nas praias, rios ou no mar.</li>
+    <li>Valorize produtores e pescadores locais que atuem de forma regular.</li>
+   </ul>
+  </div>
+  <div class="card">
+   <h3>Uma pergunta simples antes de comprar</h3>
+   <p style="font-size:1.35rem;font-weight:900;color:var(--deep)">“De onde veio este produto e a captura/comercialização está permitida?”</p>
+   <p class="small">Quando houver dúvida sobre uma espécie ou período, não adivinhe: consulte a norma oficial.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="turismo">
+ <div class="section-head"><div><div class="eyebrow">06 • visitação</div><h2>Turismo responsável</h2></div></div>
+ <div class="timeline">
+  <div class="step"><div class="num">1</div><div><h3>Planeje</h3><p>Consulte as regras da APA, áreas abertas à visitação e orientações dos prestadores autorizados.</p></div></div>
+  <div class="step"><div class="num">2</div><div><h3>Observe sem retirar</h3><p>Não retire corais, conchas ou outros elementos naturais e não alimente animais marinhos.</p></div></div>
+  <div class="step"><div class="num">3</div><div><h3>Não deixe rastros</h3><p>Leve seu lixo de volta e reduza o uso de descartáveis.</p></div></div>
+  <div class="step"><div class="num">4</div><div><h3>Respeite as áreas protegidas</h3><p>Siga sinalizações, zoneamentos, orientações de guias e regras específicas das piscinas naturais.</p></div></div>
+ </div>
+ <div class="callout"><strong>Visitação:</strong> o ICMBio disponibiliza informações sobre ordenamento, mapas, normas e prestadores de serviço de apoio à visitação na APACC.</div>
+</section>
+
+<section class="section">
+ <div class="section-head"><div><div class="eyebrow">07 • teste rápido</div><h2>Você é um consumidor consciente?</h2></div></div>
+ <div class="quiz">
+  <p><strong>Qual atitude é mais adequada quando você não sabe se um pescado está sujeito ao defeso?</strong></p>
+  <button onclick="responder(false)">Comprar mesmo assim</button>
+  <button onclick="responder(true)">Consultar a regra oficial antes de comprar</button>
+  <button onclick="responder(false)">Confiar apenas em comentários de redes sociais</button>
+  <div id="resultado"></div>
+ </div>
+</section>
+
+<div class="callout"><strong>Fotos:</strong> imagens oficiais disponibilizadas pelo ICMBio na página da APA Costa dos Corais. O portal informa licença Creative Commons Atribuição-SemDerivações 3.0 Não Adaptada para o conteúdo do site. <a href="https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais/O%20que%20Fazemos/pesquisaemonitoramento/imagens-da-home" target="_blank" rel="noopener">Ver galeria e créditos no ICMBio →</a></div>
+
+<section class="section" id="fontes">
+ <div class="section-head"><div><div class="eyebrow">08 • referências</div><h2>Fontes das informações</h2></div></div>
+ <div class="sources">
+  <div class="source"><strong>ICMBio — APA da Costa dos Corais.</strong><br><a href="https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais" target="_blank" rel="noopener">Página oficial da unidade de conservação →</a></div>
+  <div class="source"><strong>ICMBio — O que fazemos.</strong><br><a href="https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais/O%20que%20Fazemos" target="_blank" rel="noopener">Gestão, conservação, pesca e turismo →</a></div>
+  <div class="source"><strong>ICMBio — Guia do Visitante e conduta em ambientes recifais.</strong><br><a href="https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais/guia-do-visitante" target="_blank" rel="noopener">Orientações oficiais para visitantes →</a></div>
+  <div class="source"><strong>ICMBio — Ordenamento da visitação.</strong><br><a href="https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/apa-da-costa-dos-corais/O%20que%20Fazemos/usopublico/ordenamento-da-visitacao" target="_blank" rel="noopener">Normas, mapas e prestação de serviços →</a></div>
+  <div class="source"><strong>IBAMA — Períodos de defeso.</strong><br><a href="https://www.gov.br/ibama/pt-br/assuntos/biodiversidade/biodiversidade-aquatica/periodos-de-defeso" target="_blank" rel="noopener">Definição e consulta aos períodos de defeso →</a></div>
+  <div class="source"><strong>IBAMA — Defesos marinhos.</strong><br><a href="https://www.gov.br/ibama/pt-br/assuntos/biodiversidade/biodiversidade-aquatica/periodos-de-defeso/defesos-marinhos" target="_blank" rel="noopener">Normas e períodos por espécie/abrangência →</a></div>
+ </div>
+ <div class="callout"><strong>Observação:</strong> regras ambientais podem ser atualizadas. Este site é educativo e não substitui normas, portarias, planos de manejo ou orientações oficiais vigentes.</div>
+</section>
+</main>
+
+<footer>
+ <div class="footer-inner">
+  <div><strong>🌊 Consumo Consciente na Costa dos Corais</strong><br>Conhecer • Preservar • Consumir com responsabilidade</div>
+  <div>Material educativo • Alagoas</div>
+ </div>
+</footer>
+
+<script>
+function responder(certa){
+ const r=document.getElementById('resultado');
+ r.textContent=certa ? '✓ Isso! Quando houver dúvida, consulte a regra oficial antes de comprar.' : 'Atenção: o mais seguro é verificar a regra oficial antes de comprar.';
+ r.style.color=certa ? '#2e8b57' : '#8b5d00';
+}
+</script>
+</body>
+</html>
